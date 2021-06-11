@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>CenterPet centro de busca</title>
+    <link style="color: #ff0000;" rel="shortcut icon" type="imagem/x-icon" href="./assets/img/icon.svg" />
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: BizLand - v3.1.0
+  * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Top Bar ======= -->
+    <section id="topbar" class="d-flex align-items-center">
+        <div class="container d-flex justify-content-center justify-content-md-between">
+            <div class="contact-info d-flex align-items-center">
+                <i class="bi bi-envelope d-flex align-items-center"><a
+            href="mailto:contact@example.com">amiguinho@Bluehero.com</a></i>
+                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+55 11 4002 8922</span></i>
+            </div>
+            <div class="social-links d-none d-md-flex align-items-center">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo">
+                <a href="index.html"><img style="width: 300px" src="./assets/img/CenterPet.svg"></a>
+
+            </h1> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pesquisa">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">login</button>
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Cadastrar</button>
+
+        </div>
+    </header>
+    <!-- End Header -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!------ Include the above in your HEAD tag ---------->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
+
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto topnav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pet Shop</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Ongs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contatos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sobre</a>
+                </li>
+            </ul>
+        </div>
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Customer Sign In</h4>
+                        <button type="button" class="close" data-dismiss="modal">×</button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form>
+                            <label class="sr-only" for="usrname">Username</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+
+
+                            <label class="sr-only" for="Password">Name</label>
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
+                                </div>
+                                <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+
+
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" class="d-flex align-items-center">
+        <div class="container" data-aos="zoom-out" data-aos-delay="100">
+            <h1>Seja Bem Vindo <span>Center Pet</span></h1>
+            <h2>Aqui você encontra os melhores lugares para seu Pet , nas proximidades do seu lar e com preços que cabem no seu bolso</h2>
+            <div class="d-flex">
+                <a href="#about" class="btn-get-started scrollto">Quero conhecer planos</a>
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+    <!-- End Hero -->
+
+    <!---== Star Section Lessons  ==--->
+
+    <!---====== End   Section Lesson     ====-->
+    <main id="main">
+
+        <!-- ======= Featured Services Section ======= -->
+        <section id="featured-services" class="featured-services">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-8 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                            <div class="icon"><i class="bx bx-file"></i></div>
+                            <h4 class="title"><a href="">Cadastro dinâmico</a></h4>
+                            <p class="description">Voc~e se cadastra de maneira rápida, sem burocracias e seu negócio já começa a receber mais visualizações na internet</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-8 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                            <div class="icon"><i class="bx bx-user"></i></div>
+                            <h4 class="title"><a href="">Buscas rápidas</a></h4>
+                            <p class="description">Em poucos segundos tenha nas mãos as informações que precisa para escolher o melhor lugar para levar o seu amuiguinho</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-8 mb-lg-0">
+                        <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                            <div class="icon"><i class="bx bx-map"></i></div>
+                            <h4 class="title"><a href="">Múltiplas buscas</a></h4>
+                            <p class="description">Sempre que precisar de um lugar novo , basta acessar a CenterPet que iremos trazer os melhore resultados para você , seja por pet shops , clinicas veterinárias , ou ongs de doação
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Featured Services Section -->
+        <section id="aulas" class="about section-bg">
+            <div class="aulas">
+                <div class="section-title">
+                    <h2>Quem pode participar da nossa plataforma</h2>
+                    <br><br>
+                    <h6> Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the
+                        more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,</h6>
+                    <div class="container-fluid" style="background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);">
+                        <div class="container p-5">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-12 mb-4">
+                                    <div class="card h-100 shadow-lg">
+                                        <div class="card-body">
+                                            <div class="text-center p-3">
+                                                <h5 class="card-title">Basic</h5>
+                                                <small>Individual</small>
+                                                <br><br>
+                                                <span class="h2">$8</span>/month
+                                                <br><br>
+                                            </div>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg> Cras justo odio</li>
+                                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg> Dapibus ac facilisis in</li>
+                                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg> Vestibulum at eros</li>
+                                        </ul>
+                                        <div class="card-body text-center">
+                                            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12 mb-4">
+                                    <div class="card h-100 shadow-lg">
+                                        <div class="card-body">
+                                            <div class="text-center p-3">
+                                                <h5 class="card-title">Standard</h5>
+                                                <small>Small Business</small>
+                                                <br><br>
+                                                <span class="h2">$20</span>/month
+                                                <br><br>
+                                            </div>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg> Cras justo odio</li>
+                                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg> Dapibus ac facilisis in</li>
+                                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg> Vestibulum at eros</li>
+                                        </ul>
+                                        <div class="card-body text-center">
+                                            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-12 mb-4">
+                                    <div class="card h-100 shadow-lg">
+                                        <div class="card-body">
+                                            <div class="text-center p-3">
+                                                <h5 class="card-title">Premium</h5>
+                                                <small>Large Companies</small>
+                                                <br><br>
+                                                <span class="h2">$40</span>/month
+                                                <br><br>
+                                            </div>
+                                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                        </div>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg> Cras justo odio</li>
+                                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg> Dapibus ac facilisis in</li>
+                                            <li class="list-group-item"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                  <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                                </svg> Vestibulum at eros</li>
+                                        </ul>
+                                        <div class="card-body text-center">
+                                            <button class="btn btn-outline-primary btn-lg" style="border-radius:30px">Select</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+        </section>
+        <!-- ======= Counts Section ======= -->
+        <section id="counts" class="counts">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-8">
+                        <div class="count-box">
+                            <i class="bi bi-emoji-smile"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="1500" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Clientes Satisfeitos</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mt-8 mt-md-0">
+                        <div class="count-box">
+                            <i class="bx bx-home"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>participantes ativos</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 mt-8 mt-lg-0">
+                        <div class="count-box">
+                            <i class="bx bx-user"></i>
+                            <span data-purecounter-start="0" data-purecounter-end="801" data-purecounter-duration="1" class="purecounter"></span>
+                            <p>Ongs de doação</p>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+        </section>
+        <!-- End Counts Section -->
+
+        <!-- ======= Clients Section ======= -->
+        <section id="clients" class="clients section-bg">
+            <div class="container" data-aos="zoom-in">
+
+                <div class="row">
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-1.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-2.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-3.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-4.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-5.png" class="img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-2 col-md-4 col-6 d-flex align-items-center justify-content-center">
+                        <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- End Músic Section -->
+
+
+            <!-- ======= About Section ======= -->
+            <section id="about" class="about section-bg">
+                <div class="container" data-aos="fade-up">
+
+                    <div class="section-title">
+                        <h2>Blue Hero </h2>
+                        <h3> <span>Aqui seu estabelecimento ganha de verdade !</span></h3>
+                    </div>
+                    <img src="./assets/img/bannger-gif.gif" width="700px" height="auto" allowFullScreen></img>
+                    <div class="row">
+                        <div class="col-lg-12 pt-4 pt-lg-0" data-aos="fade-up" data-aos-delay="100">
+                            <h3>SAbe do que seu pet precisa ? ?.</h3>
+                            <p class="fst-italic">
+                                <o>to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
+                                    in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="bx bx-store-alt"></i>
+                                    <div>
+                                        <h5>Unidades em diversas localidades</h5>
+                                        <p>to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+                                    </div>
+                                </li>
+                                <li>
+                                    <i class='bx bxs-like bx-spin'></i>
+                                    <div>
+                                        <h5>Acompanhamento de perto</h5>
+                                        <p>to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+            <!-- End About Section -->
+
+    </main>
+    <!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h4>Insira seu e-mail e receba nossas novidades</h4>
+                        <p>Não se preocupe , não lhe enviaremos mensagens de span</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="cadastre-se">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-8 footer-contact">
+                        <h3><img src="./assets/img/CenterPet.svg" style="width: 80px;"></h3>
+                        <p>
+                            Rua Geraldo Vandre <br> São Paulo , SP<br> 05568-0325
+                            <br><br>
+                            <strong>Fone:</strong> +11 4002-8922<br>
+                            <strong>Email:</strong> amiguinho@Bluehero.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto active" href="#hero">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto" href="#aulas">Planos</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto" href="#music">Ongs</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto" href="#about">Sobre</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto" href="contact.html">Cadastro</a></li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Nossas midias sociais</h4>
+                        <p>Siga nossas redes sociais e acompanhe as novidades da CenterPet </p>
+                        <div class="social-links mt-3">
+                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="row mt-5">
+
+
+                <span style="color: #00f80c;"> &copy; Code Knight. todos direitos reservados 
+          <script type="text/javascript">
+            document.write(new Date().getFullYear());
+          </script>
+        </span>
+
+
+
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/purecounter/purecounter.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
