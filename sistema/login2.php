@@ -39,7 +39,7 @@
                 </div>
                 <!-- fim Social media-->
                 <p class="description description-second"> Ou use seu email e senha </p>
-                <form action="cadastro_login.php" class="form">
+                <form action="crud/cadastro_login.php" class="form">
                     <label class="label-input"><i class="fas fa-user-alt icon-modify"></i></i> <input type="text" name="nomec" placeholder="Nome" required></label>
 
                     <label class="label-input"><i class="fas fa-store-alt icon-modify"></i> <input type="text" name="cnpjc" placeholder="CNPJ" required></label>
@@ -96,7 +96,7 @@
                 </div>
                 <!-- fim Social media-->
                 <p class="description description-second">Ou use seu email e senha</p>
-                <form action="logar.php" method="post" class="form">
+                <form action="crud/logar.php" method="post" class="form">
 
                     <label class="label-input"><i class="far fa-envelope icon-modify"></i><input type="email" name="email" id="" placeholder="email" required></label>
 
@@ -113,7 +113,7 @@
                             Voce nao esta logado!
                         </div>
                     <?php } ?>
-                    <a class="password" href="#">Esqueci a senha?</a>
+                    <a class="password" href="Esqueci_Senha.php">Esqueci a senha?</a>
                     <button class="btn btn-second">Logar</button>
                 </form>
 

@@ -1,33 +1,46 @@
 <div id="layoutSidenav_nav">
     <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
         <div class="sb-sidenav-menu">
-            <div class="nav">
-                <div class="sb-sidenav-menu-heading">Servi&ccedil;os</div>
+            <div class="nav" <?php  ?>>
+                <div class="sb-sidenav-menu-heading" >Servi&ccedil;os</div>
                 <!---Aqui ficam os links da barra de navegçãi todos então como extensão .jso
                         Lembrando que qualquer alteração feita nessa parte gera um código de erro 404 do xammp
                         não será localizado nenhum arquivo
-                        --> <?php if ($_SESSION["usuario"] == "gerente") { ?>
+                        --> <?php if ($_SESSION["tipo_usuario"] == "gerente" || $_SESSION["tipo_usuario"] == "Gerente" ) { ?>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#controleusu" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                        Serviços
+                        Conta
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
                     <div class="collapse" id="controleusu" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="Tb_Frete.php">Tabela de frete</a>
+                            <a class="nav-link" href="gerenciamento_conta.php">Gerenciamento de conta</a>
                         </nav>
                     </div>
-                <?php } ?>
-                <!---->
-                <?php if ($_SESSION["usuario"] == "cliente") { ?>
+                     <!--Programar nome de usuario-->
+                     
+                    <div class="collapse" id="controleusu" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="cad_funcionariov2.php">Cadastro de usuario</a>
+                        </nav>
+                    </div>
+                <?php } else{ ?>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#controleus" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                        teste
+                        Conta
                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                     </a>
                     <div class="collapse" id="controleus" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                         <nav class="sb-sidenav-menu-nested nav">
-                            <a class="nav-link" href="Tb_Frete.php">Tabela de frete</a>
+                            <a class="nav-link" href="gerenciamento_conta.php">Gerenciamento de conta cliente </a>
+                            <a class="nav-link" href="cad_endereco.php">Gerenciamento de Plano cliente </a>
+                        </nav>
+                    </div>
+                     <!--Programar nome de usuario-->
+                    
+                    <div class="collapse" id="controleusu" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                           
                         </nav>
                     </div>
                 <?php } ?>
@@ -37,7 +50,7 @@
         <div class="sb-sidenav-footer">
             <div class="small">Bem vindo :</div>
             <!--Programar nome de usuario-->
-            <?php echo $_SESSION["nome"]; ?>
+            <?php echo $_SESSION["nome_fantasia"]; ?>
         </div>
     </nav>
 </div>

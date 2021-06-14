@@ -1,196 +1,211 @@
-<?php
-include 'banco.php';
-
-?>
-
-
 <!DOCTYPE html>
-<html lang="pt-br">
 
 <head>
-	<title>LZR-SGB Atualizar Senha</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="icon" type="image/png" href="images/lanzara_icon.png" />
-	<!--===============================================================================================-->
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
-	<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<!--===============================================================================================-->
-	<style>
-		.alerta {
-			padding: 25px;
-			border: 1px solid gray;
-			border-radius: 3px;
-			margin: 10px;
-			font-size: 18px;
-		}
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>System Dog World || Atualizar senha</title>
 
-		.error {
-			border-color: #e8273b;
-			color: #FFF;
-			background-color: #ed5565;
-			padding: 25px;
-			border: 1px solid gray;
-			border-radius: 3px;
-			margin: 10px;
-			font-size: 18px;
-		}
 
-		.sucesso {
-			border-color: #87c940;
-			color: #FFF;
-			background-color: #a0d468;
-			padding: 25px;
-			border: 1px solid gray;
-			border-radius: 3px;
-			margin: 10px;
-			font-size: 18px;
-		}
-	</style>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>Page Title - SB Admin</title>
+	<link href="css/styles.css" rel="stylesheet" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-	<?php
+
+	<style>
+		.css-selector {
+			background: linear-gradient(34deg, #006bff, #2369ca, #003987, #122743, #01070f);
+			background-size: 1000% 1000%;
+
+			-webkit-animation: AnimationName 30s ease infinite;
+			-moz-animation: AnimationName 30s ease infinite;
+			animation: AnimationName 30s ease infinite;
+		}
+
+		@-webkit-keyframes AnimationName {
+			0% {
+				background-position: 87% 0%
+			}
+
+			50% {
+				background-position: 14% 100%
+			}
+
+			100% {
+				background-position: 87% 0%
+			}
+		}
+
+		@-moz-keyframes AnimationName {
+			0% {
+				background-position: 87% 0%
+			}
+
+			50% {
+				background-position: 14% 100%
+			}
+
+			100% {
+				background-position: 87% 0%
+			}
+		}
+
+		@keyframes AnimationName {
+			0% {
+				background-position: 87% 0%
+			}
+
+			50% {
+				background-position: 14% 100%
+			}
+
+			100% {
+				background-position: 87% 0%
+			}
+		}
+	</style>
+
+	<body class="css-selector" <?php include 'crud/banco.php';	?>>
 
 
-	?>
-
-	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-			<div class="wrap-login100R">
-				<form class="login100-form validate-form" method="Post" action="atualiza_senha.php">
-
-					</span>
-
-					<br>
-					<span class="login100-form-title p-b-34 p-t-27">
-						Atualizar senha
-					</span>
-					<br>
-
-					<div class="wrap-input100 validate-input" data-validate="Enter username">
-						<input class="input100" type="text" name="email" placeholder="Digite seu e-mail">
-						<span class="focus-input100" data-placeholder="&#xf207;"></span>
-					</div>
-					<div class="container-login100-form-btn">
-						<button type="submit" name="localizar" class="login100-form-btn">
-							Localizar
-						</button>
-					</div>
-					<br>
 
 
-					<?php if (isset($_GET["sucesso"]) && $_GET["sucesso"] == 2) { ?>
-						<br>
-						<div class="alert alert-success">
-							<?php
-							echo "Altualizada com Sucesso!";
-							?>
-						</div>
-					<?php } else if (isset($_GET["erro"]) && $_GET["erro"] == 2) { ?>
+		<div id="layoutAuthentication">
+			<div id="layoutAuthentication_content">
+				<main>
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-7">
+								<div class="card shadow-lg border-0 rounded-lg mt-5">
+									<div class="card-header">
+										<h3 class="text-center font-weight-light my-3">Redefinir senha</h3>
+									</div>
+									<div class="card-body">
 
-						<div class="alert alert-danger">
-							<?php
-							echo "Erro ao atualizar";
-							?>
-						</div>
-					<?php } ?>
-					<?php if (isset($_GET["sucesso"]) && $_GET["sucesso"] == 1) { ?>
+										<form action="crud/Envia_Senha.php" method="post" data-toggle="validator" role="form">
+											<div class="form-row">
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="small mb-1" for="emailfun">Email</label>
+														<input class="form-control py-4" id="emailfun" type="email" name="email" placeholder="Digite o E-mail" required />
+													</div>
+												</div>
 
-						<form class="login100-form validate-form" method="Post" action="atualiza_senha.php">
-							<div class="wrap-input100 validate-input" data-validate="Enter password">
-								<input class="input100" type="password" id="nsenha" name="nsenha" placeholder="Insira a sua nova senha">
-								<span class="focus-input100" data-placeholder="&#xf191;"></span>
+											</div>
+											<button type="submit" class="btn btn-primary " name="localizar"></i> Localizar</button>
+											<br>
+											<?php if (isset($_GET["sucesso"]) && $_GET["sucesso"] == 2) { ?>
+												<br>
+												<div class="alert alert-success">
+													<?php
+													echo "Uma nova senha foi envia para o seu email!";
+													?>
+												</div>
+											<?php } else if (isset($_GET["erro"]) && $_GET["erro"] == 2) { ?>
+
+												<div class="alert alert-danger">
+													<?php
+													echo "Erro ao atualizar";
+													?>
+												</div>
+											<?php } ?>
+											<?php if (isset($_GET["sucesso"]) && $_GET["sucesso"] == 1) { ?>
+
+												<div class="card" style="width: 100%; margin-top:20px;">
+													<div class="card" style="width: 100%; ">
+														<div class="card-body">
+
+															<table class="table">
+
+																<tbody>
+
+																	<tr>
+																		<th scope="row">Nome Fantasia</th>
+																		<td><?php echo $_SESSION["nome_fantasia"]; ?></td>
+
+																	</tr>
+
+
+																	<tr>
+																		<th scope="row">CNPJ</th>
+																		<td><?php echo $_SESSION["cnpj"]; ?></td>
+
+																	</tr>
+																</tbody>
+															</table>
+
+
+														</div>
+													</div>
+
+												</div>
+												<div id="botoes" class="col-md-6 " style="left: 170px; margin: 10px;">
+													<button type="submit" class="btn btn-success btn-lg" name="atualizar"></i> Enviar Nova Senha</button>
+
+												</div>
+
+											<?php } else if (isset($_GET["erroloc"]) && $_GET["erroloc"] == 1) { ?>
+
+												<div class="alert alert-danger col-md-6">
+													<?php
+
+													echo "Não localizado!";
+
+													?>
+												</div>
+											<?php } else if (isset($_GET["erro"]) && $_GET["erro"] == 3) { ?>
+												<div class="alert alert-danger col-md-6">
+													<?php
+
+													echo "Verifique se as senha são identicas !";
+
+													?>
+												</div>
+											<?php } ?>
+											<br />
+
+
+											<br>
+											<a type="submit" class="btn btn-primary btn-lg btn-block" href="login2.php"><i class="fas fa-paw"></i>Fazer login </a>
+										</form>
+									</div>
+									<div class="card-footer text-center">
+										<div class="small">
+
+										</div>
+									</div>
+								</div>
 							</div>
-							<div class="wrap-input100 validate-input" data-validate="Enter password">
-								<input class="input100" type="password" name="csenha" placeholder="Repetir a sua nova senha">
-								<span class="focus-input100" data-placeholder="&#xf191;"></span>
-							</div>
-							<div class="container-login100-form-btn">
-								<button type="submit" name="atualizar" class="login100-form-btn">
-									Registrar nova senha
-								</button>
-							</div>
-							<br>
-
-
-
-						</form>
-					<?php } else if (isset($_GET["erroloc"]) && $_GET["erroloc"] == 1) { ?>
-						<div class="alert alert-danger col-md-6">
-							<?php
-
-							echo "Não localizado!";
-
-							?>
 						</div>
-					<?php } else if (isset($_GET["erro"]) && $_GET["erro"] == 3) { ?>
-						<div class="alert alert-danger col-md-6">
-							<?php
-
-							echo "Verifique se as senha são identicas !";
-
-							?>
-						</div>
-					<?php } ?>
-
-					<div class="text-center p-t-90">
-						<a class="txt1" href="Login_page.php">
-							Fazer login
-						</a>
 					</div>
-				</form><!--  -->
+				</main>
 			</div>
-
-
-
-
-
-
+			<div id="layoutAuthentication_footer">
+				<footer class="py-4 bg-light mt-auto">
+					<div class="container-fluid">
+						<div class="d-flex align-items-center justify-content-between small">
+							<div class="text-muted">Copyright &copy; Dog World Pet Shop</div>
+							<div>
+								<a href="#">Politica de privacidade</a> &middot;
+								<a href="#">Termos &amp; Condoções</a>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
 		</div>
-	</div>
+		
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+		<script src="js/scripts.js"></script>
+	</body>
 
-
-
-	<div id="dropDownSelect1"></div>
-	
-
-	<!--===============================================================================================-->
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/animsition/js/animsition.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/daterangepicker/moment.min.js"></script>
-	<script src="vendor/daterangepicker/daterangepicker.js"></script>
-	<!--===============================================================================================-->
-	<script src="vendor/countdowntime/countdowntime.js"></script>
-	<!--===============================================================================================-->
-	<script src="js/main.js"></script>
-
-</body>
-
-</html>
+	</html>

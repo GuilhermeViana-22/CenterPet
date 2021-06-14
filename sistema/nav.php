@@ -1,8 +1,8 @@
-﻿<?php include 'banco.php';  include 'verifica_login.php';  ?>
+﻿<?php include 'crud/banco.php';  include 'crud/verifica_login.php';  ?>
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
 
     
-    <a class="navbar-brand" href="inicial.php"><i  style="padding: 5%"></i> Lanzara Transporte</a>
+    <a class="navbar-brand" href="inicial.php"><i  style="padding: 5%"></i> Center Pet</a>
     <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="inicial.php"><i
             class="fas fa-bars"></i></button>
  
@@ -15,7 +15,7 @@
             <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="logout.php">Sair</a>
+                <a class="dropdown-item" href="crud/logout.php">Sair</a>
             </div>
         </li>
     </ul>
