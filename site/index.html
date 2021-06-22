@@ -6,16 +6,8 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>CenterPet centro de busca</title>
-    <link style="color: #ff0000;" rel="shortcut icon" type="imagem/x-icon" href="./assets/img/icon.svg" />
     <meta content="" name="description">
     <meta content="" name="keywords">
-
-    <!-- Favicons -->
-
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +15,6 @@
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
@@ -36,7 +27,6 @@
 </head>
 
 <body>
-
     <!-- ======= Top Bar ======= -->
     <section id="topbar" class="d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
@@ -53,110 +43,45 @@
             </div>
         </div>
     </section>
-
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
-
             <h1 class="logo">
-                <a href="index.html"><img style="width: 300px" src="./assets/img/CenterPet.svg"></a>
-
+                <a href="index.html"><img id="logoCenterPet" src="./assets/img/CenterPet.svg"></a>
             </h1> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pesquisa">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">login</button>
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Cadastrar</button>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
 
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Cadastrar</button>
         </div>
     </header>
-    <!-- End Header -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!------ Include the above in your HEAD tag ---------->
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
 
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto topnav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pet Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Ongs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contatos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-            </ul>
-        </div>
-        <!-- The Modal -->
-        <div class="modal" id="myModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Customer Sign In</h4>
-                        <button type="button" class="close" data-dismiss="modal">×</button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <form>
-                            <label class="sr-only" for="usrname">Username</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
-
-
-                            <label class="sr-only" for="Password">Name</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
-                                </div>
-                                <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Modal footer -->
-
-                </div>
-            </div>
-        </div>
-
-
+    <nav class="navegacao">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Planos</a></li>
+            <li><a href="#">Ongs</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
     </nav>
 
+    <!------ Include the above in your HEAD tag ---------->
 
 
-    <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
             <h1>Seja Bem Vindo <span>Center Pet</span></h1>
             <h2>Aqui você encontra os melhores lugares para seu Pet , nas proximidades do seu lar e com preços que cabem no seu bolso</h2>
             <div class="d-flex">
-                <a href="#about" class="btn-get-started scrollto">Quero conhecer planos</a>
+                <a href="#prices" class="btn-get-started scrollto">Quero conhecer planos</a>
             </div>
-
-
         </div>
         </div>
     </section>
-    <!-- End Hero -->
 
     <!---== Star Section Lessons  ==--->
-
     <!---====== End   Section Lesson     ====-->
     <main id="main">
-
         <!-- ======= Featured Services Section ======= -->
         <section id="featured-services" class="featured-services">
             <div class="container" data-aos="fade-up">
@@ -190,10 +115,13 @@
         <section id="aulas" class="about section-bg">
             <div class="aulas">
                 <div class="section-title">
-                    <h2>Quem pode participar da nossa plataforma</h2>
+                    <h2>Quem pode participar da nossa plataforma ?</h2>
                     <br><br>
-                    <h6> Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the
-                        more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,</h6>
+                    <div style="width: 900px; display: flex; ;">
+                        <h6> Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one
+                            of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,</h6>
+
+                    </div>
                     <div class="container-fluid" style="background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);">
                         <div class="container p-5">
                             <div class="row">
@@ -370,7 +298,7 @@
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-title">
-                        <h2>Blue Hero </h2>
+                        <h2>Center Pet</h2>
                         <h3> <span>Aqui seu estabelecimento ganha de verdade !</span></h3>
                     </div>
                     <img src="./assets/img/bannger-gif.gif" width="700px" height="auto" allowFullScreen></img>
@@ -411,20 +339,6 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
-
-        <div class="footer-newsletter">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h4>Insira seu e-mail e receba nossas novidades</h4>
-                        <p>Não se preocupe , não lhe enviaremos mensagens de span</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="cadastre-se">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="footer-top">
             <div class="container">
