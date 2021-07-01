@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -34,80 +34,81 @@
 
     );
     ?>
-    
+
 
 
 </head>
 
 <script>
-        function limpa_formulário_cep() {
-            //Limpa valores do formulário de cep.
-            document.getElementById('rua').value = ("");
+    function limpa_formulário_cep() {
+        //Limpa valores do formulário de cep.
+        document.getElementById('rua').value = ("");
 
-            document.getElementById('cidade').value = ("");
-            document.getElementById('uf').value = ("");
+        document.getElementById('cidade').value = ("");
+        document.getElementById('uf').value = ("");
 
+    }
+
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            //Atualiza os campos com os valores.
+            document.getElementById('rua').value = (conteudo.logradouro);
+
+            document.getElementById('cidade').value = (conteudo.localidade);
+            document.getElementById('uf').value = (conteudo.uf);
+
+        } //end if.
+        else {
+            //CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
         }
+    }
 
-        function meu_callback(conteudo) {
-            if (!("erro" in conteudo)) {
-                //Atualiza os campos com os valores.
-                document.getElementById('rua').value = (conteudo.logradouro);
+    function pesquisacep(valor) {
 
-                document.getElementById('cidade').value = (conteudo.localidade);
-                document.getElementById('uf').value = (conteudo.uf);
+        //Nova variável "cep" somente com dígitos.
+        var cep = valor.replace(/\D/g, '');
+
+        //Verifica se campo cep possui valor informado.
+        if (cep != "") {
+
+            //Expressão regular para validar o CEP.
+            var validacep = /^[0-9]{8}$/;
+
+            //Valida o formato do CEP.
+            if (validacep.test(cep)) {
+
+                //Preenche os campos com "..." enquanto consulta webservice.
+                document.getElementById('rua').value = "...";
+
+                document.getElementById('cidade').value = "...";
+                document.getElementById('uf').value = "...";
+
+
+                //Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                //Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+
+                //Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
 
             } //end if.
             else {
-                //CEP não Encontrado.
+                //cep é inválido.
                 limpa_formulário_cep();
-                alert("CEP não encontrado.");
+                alert("Formato de CEP inválido.");
             }
+        } //end if.
+        else {
+            //cep sem valor, limpa formulário.
+            limpa_formulário_cep();
         }
+    };
+</script>
 
-        function pesquisacep(valor) {
-
-            //Nova variável "cep" somente com dígitos.
-            var cep = valor.replace(/\D/g, '');
-
-            //Verifica se campo cep possui valor informado.
-            if (cep != "") {
-
-                //Expressão regular para validar o CEP.
-                var validacep = /^[0-9]{8}$/;
-
-                //Valida o formato do CEP.
-                if (validacep.test(cep)) {
-
-                    //Preenche os campos com "..." enquanto consulta webservice.
-                    document.getElementById('rua').value = "...";
-
-                    document.getElementById('cidade').value = "...";
-                    document.getElementById('uf').value = "...";
-
-
-                    //Cria um elemento javascript.
-                    var script = document.createElement('script');
-
-                    //Sincroniza com o callback.
-                    script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
-
-                    //Insere script no documento e carrega o conteúdo.
-                    document.body.appendChild(script);
-
-                } //end if.
-                else {
-                    //cep é inválido.
-                    limpa_formulário_cep();
-                    alert("Formato de CEP inválido.");
-                }
-            } //end if.
-            else {
-                //cep sem valor, limpa formulário.
-                limpa_formulário_cep();
-            }
-        };
-    </script>
 <body class="sb-nav-fixed">
 
     <?php include 'nav.php'; ?>
@@ -175,7 +176,17 @@
                     <div class="card">
 
                         <div class="card-body">
-                            <form id="formExemplo" method="post" action="crud/crud_endereco.php" data-toggle="validator" role="form">
+                            <form id="formExemplo" method="post" action="crud/crud_enderecoG.php" data-toggle="validator" role="form">
+                                <?php
+                                $dados;
+                                if (isset($_GET["id_usuario"])) {
+
+                                    $queryCliente = $conexao->query("SELECT * FROM usuario WHERE id_usuario = " . $_GET["id_usuario"]);
+                                    $dados = $queryCliente->fetch_assoc();
+                                ?>
+                                    <input type="hidden" name="id_usuario" value="<?php echo $_GET["id_usuario"]; ?>" />
+                                <?php } ?>
+
                                 <?php
                                 $dados;
                                 if (isset($_GET["id_endereco"])) {
@@ -188,7 +199,12 @@
 
                                 <div class="form-group row">
 
-
+                                    <div class=" col-md-3">
+                                        <label for="cep" class="small col-md-6 mb-1">Nome Fantasia</label>
+                                        <input name="nome_fantasia" type="text"  class="form-control" id="cep" value="<?php if (isset($_GET["id_usuario"])) {
+                                                                                                                                            echo $dados["nome_fantasia"];
+                                                                                                                                        } ?>" disabled >
+                                    </div>
 
                                     <div class=" col-md-3">
                                         <label for="cep" class="small col-md-3 mb-1">CEP</label>
@@ -242,27 +258,27 @@
                                         </div>
                                     </div>
                                     <div class="form-group col-md-3 mb-0">
-                                    <label class="small mb-1" for="cmbR">Regiao</label>
+                                        <label class="small mb-1" for="cmbR">Regiao</label>
 
-                                    <select id="cmbR" class="form-control py-2" name="regiao">
-                                        <?php
-                                        # A logica utilizada nos selects é diferente dos demais blocos de codigo do nosso sistema
-                                        if (isset($_GET["id_endereco"])) {
-                                            foreach ($regiao as $key => $value) {
-                                                if ($dados["regiao"] == $key) {
-                                                    echo "<option value=" . $key . " selected>" . $value . "</option>";
-                                                } else {
+                                        <select id="cmbR" class="form-control py-2" name="regiao">
+                                            <?php
+                                            # A logica utilizada nos selects é diferente dos demais blocos de codigo do nosso sistema
+                                            if (isset($_GET["id_endereco"])) {
+                                                foreach ($regiao as $key => $value) {
+                                                    if ($dados["regiao"] == $key) {
+                                                        echo "<option value=" . $key . " selected>" . $value . "</option>";
+                                                    } else {
+                                                        echo "<option value=" . $key . ">" . $value . "</option>";
+                                                    }
+                                                }
+                                            } else {
+                                                foreach ($regiao as $key => $value) {
                                                     echo "<option value=" . $key . ">" . $value . "</option>";
                                                 }
                                             }
-                                        } else {
-                                            foreach ($regiao as $key => $value) {
-                                                echo "<option value=" . $key . ">" . $value . "</option>";
-                                            }
-                                        }
-                                        ?>
-                                    </select>
-                                </div>
+                                            ?>
+                                        </select>
+                                    </div>
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label class="small mb-1" for="txtTelefone">Telefone / Celular</label>
@@ -295,9 +311,9 @@
                                 <div class="col-xl-12 col-md-12 ">
                                     <div class="card">
                                         <div class="card-header">
-                                            <i class="fas fa-table mr-6"></i> Meus Endereco
+                                            <i class="fas fa-table mr-6"></i> Usuarios
                                         </div>
-                                        <form method="GET" style="margin-top:15px;" action="cad_endereco.php">
+                                        <form method="GET" style="margin-top:15px;" action="Cad_enderecoG.php">
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="row">
@@ -322,14 +338,9 @@
                                             <table class="table table-hover">
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Logradouro</th>
-                                                    <th>Cep</th>
-                                                    <th>Num</th>
-                                                    <th>Complemento</th>
-                                                    <th>Bairro</th>
-                                                    <th>Cidade</th>
-                                                    <th>Estado</th>
-                                                    <th>Regiao</th>
+                                                    <th>Nome Fantasia</th>
+                                                    <th>CNPJ</th>
+                                                  
                                                     <th>Ações</th>
                                                 </tr>
                                                 <?php
@@ -338,31 +349,27 @@
                                                     $pesquisa = $_GET["pesquisa"];
                                                     $consultaTabela = "SELECT * FROM endereco WHERE nome LIKE '%$pesquisa%' OR sobrenome LIKE '%$pesquisa%' OR email LIKE '%$pesquisa%' OR cpf LIKE '%$pesquisa%'";
                                                 } else {
-                                                    $consultaTabela = "SELECT * FROM endereco ed INNER JOIN usuario us on ed.id_usuario = us.id_usuario where ed.id_usuario =  " . $_SESSION["id_usuario"];
+                                                    $consultaTabela = "SELECT * FROM usuario";
                                                 }
                                                 $queryClietes = $conexao->query($consultaTabela);
 
                                                 while ($dados = $queryClietes->fetch_assoc()) {
                                                 ?>
                                                     <tr>
-                                                        <td><?php echo $dados["id_endereco"]; ?></td>
-                                                        <td><?php echo $dados["logradouro"]; ?></td>
+                                                        <td><?php echo $dados["id_usuario"]; ?></td>
+                                                        <td><?php echo $dados["nome_fantasia"]; ?></td>
                                                         <!--Converter a data para formato pt-BR-->
-                                                        <td><?php echo $dados["cep"];; ?></td>
-                                                        <td><?php echo $dados["num"]; ?></td>
-                                                        <td><?php echo $dados["complemento"]; ?></td>
-                                                        <td><?php echo $dados["bairro"]; ?></td>
-                                                        <td><?php echo $dados["cidade"]; ?></td>
-                                                        <!--Converter a data para formato pt-BR-->
-                                                        <td><?php echo $dados["estado"];; ?></td>
-                                                        <td><?php echo $dados["regiao"]; ?></td>
+                                                        <td><?php echo $dados["cnpj"];; ?></td>
+                                                      
+
+
                                                         <td>
-                                                            <a href="cad_endereco.php?id_endereco=<?php echo $dados["id_endereco"]; ?>" class="btn btn-primary"><i style="font-size: 10pt;" class="fas fa-pencil-alt"></i></a>
+                                                            <a href="Cad_enderecoG.php?id_usuario=<?php echo $dados["id_usuario"]; ?>" class="btn btn-primary"><i style="font-size: 10pt;" class="fas fa-pencil-alt"></i></a>
                                                             &nbsp;&nbsp;
 
 
 
-                                                            <a href="crud/crud_endereco.php?excluir=1&id_endereco=<?php echo $dados["id_endereco"]; ?>" class="btn btn-danger btn-excluir-cliente"><i class="fas fa-times"></i></a>
+                                                            <a href="crud/crud_endereco.php?excluir=1&id_usuario=<?php echo $dados["id_usuario"]; ?>" class="btn btn-danger btn-excluir-cliente"><i class="fas fa-times"></i></a>
                                                         </td>
 
                                                     </tr>

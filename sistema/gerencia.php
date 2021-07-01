@@ -8,7 +8,7 @@
     <link href="css/styles.css" rel="stylesheet" />
     <title>Tabela de frete</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="images/lanzara_icon.png" />
+    <link rel="icon" type="image/png" href="images/" >
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -100,43 +100,7 @@
                         </div>
 
                     </div>
-                    <div class="card" style="width: 100%; margin-top:20px;">
-                        <div class="card" style="width: 100%; ">
-                            <div class="card-body">
-                                <h5 class="card-title">Pagamento</h5>
-
-                                <table class="table">
-
-                                    <tbody>
-
-                                        <tr>
-                                            <th scope="row">Cartao</th>
-                                            <td class="cartao">11225522466254</td>
-                                            <td class="">visa</td>
-                                            <th scope="row">CVV</th>
-                                            <td class="cvv"></td>
-                                           
-                                            <td><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalPagamento" data-bs-whatever="@mdo"><i class="fas fa-pencil-alt"></i></a></td>
-
-                                        </tr>
-
-
-                                        <tr>
-                                            <th scope="row">Plano</th>
-                                            <td>semestral </td>
-                                            <td>desricao </td>
-                                            <td>desricao </td>
-                                            <td><a class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#ModalPlano" data-bs-whatever="@mdo"><i class="fas fa-pencil-alt"></i></a></td>
-
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-
-                            </div>
-                        </div>
-
-                    </div>
+                   
 
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -206,60 +170,8 @@
                         </div>
                     </div>
 
-                    <div class="modal fade" id="ModalPagamento" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Pagamento</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-
-                                        <div class="mb-3">
-                                            <label for="recipient-name" class="col-form-label">Nome:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="recipient-name" class="col-form-label">Cartao:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="recipient-name" class="col-form-label"> CVV:</label>
-                                            <input type="text" class="form-control" id="recipient-name">
-                                        </div>
-
-
-
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                                    <button type="button" class="btn btn-primary">Salvar</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="modal fade" id="ModalPlano" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Planos</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    Planos vai aqui
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-
-                                    <button type="button" class="btn btn-primary">Salvar</button>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    
+                    
 
 
                 </div>

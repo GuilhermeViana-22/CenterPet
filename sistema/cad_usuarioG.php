@@ -133,13 +133,16 @@
                     <div class="col-md-12">
                         <div class="small-box bg-green">
                             <div class="inner">
-                              <?php
+                                <?php
 
-                                   
-                                   # $total = mysqli_query($conexao,'SELECT COUNT(id_usuario) as Total_funcionario from usuario WHERE ativo="S"');
-								#	$total_fun = $total->fetch_assoc();
-                                    ?>
-                                    <div class="col-my-4" style="height: 80px;"><h2 ><strong><?php #  echo $total_fun["Total_funcionario"]; ?></strong></h2> Total de Funcionários</div>
+
+                                # $total = mysqli_query($conexao,'SELECT COUNT(id_usuario) as Total_funcionario from usuario WHERE ativo="S"');
+                                #	$total_fun = $total->fetch_assoc();
+                                ?>
+                                <div class="col-my-4" style="height: 80px;">
+                                    <h2><strong><?php #  echo $total_fun["Total_funcionario"]; 
+                                                ?></strong></h2> Total de Funcionários
+                                </div>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-person-add"></i>
@@ -152,14 +155,17 @@
                         <!-- small box -->
                         <div style="height: 105px;" class="small-box bg-yellow">
                             <div class="inner">
-                            <div class="inner">
-                              <?php
- 
-                                   # $total = mysqli_query($conexao,'SELECT COUNT(id_usuario) as Total_funcionario from usuario WHERE cargo="Gerente"');
-									#$total_fun = $total->fetch_assoc();
+                                <div class="inner">
+                                    <?php
+
+                                    # $total = mysqli_query($conexao,'SELECT COUNT(id_usuario) as Total_funcionario from usuario WHERE cargo="Gerente"');
+                                    #$total_fun = $total->fetch_assoc();
                                     ?>
-                                    <div class="col-my-4" style="height: 80px;"><h2 ><strong><?php #echo $total_fun["Total_funcionario"]; ?></strong></h2> Administradores</div>
-                            </div>
+                                    <div class="col-my-4" style="height: 80px;">
+                                        <h2><strong><?php #echo $total_fun["Total_funcionario"]; 
+                                                    ?></strong></h2> Administradores
+                                    </div>
+                                </div>
                             </div>
                             <div class="icon">
                                 <i class="ion ion-pie-graph"></i>
@@ -201,6 +207,7 @@
                                             <table class="table table-bordered">
                                                 <tr>
 
+                                                    <th>#</th>
                                                     <th>Nome Fantasia</th>
                                                     <th>CNPJ </th>
                                                     <th>Email</th>
@@ -216,11 +223,12 @@
                                                 } else {
                                                     $consultaTabela = "SELECT * FROM usuario";
                                                 }
-                                               $queryClietes = $conexao->query($consultaTabela);
+                                                $queryClietes = $conexao->query($consultaTabela);
 
                                                 while ($dados = $queryClietes->fetch_assoc()) {
                                                 ?>
                                                     <tr>
+                                                        <td><?php echo $dados["id_usuario"]; ?></td>
                                                         <td><?php echo $dados["nome_fantasia"]; ?></td>
                                                         <td><?php echo $dados["cnpj"]; ?></td>
                                                         <td><?php echo $dados["email"]; ?></td>
@@ -299,25 +307,25 @@
                                             <div class="form-group">
                                                 <label for="exampleInputName">Nome</label>
                                                 <input type="text" class="form-control nome" id="nome" value="<?php if (isset($_GET["Cod_funcionario"])) {
-                                                                                                                        #essa função do php pega o valor do input nome
-                                                                                                                            echo $dados["nome"];
-                                                                                                                        } ?>" placeholder="Digite o nome do funcionário" name="nome" required>
+                                                                                                                    #essa função do php pega o valor do input nome
+                                                                                                                    echo $dados["nome"];
+                                                                                                                } ?>" placeholder="Digite o nome do funcionário" name="nome" required>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputName">CPF</label>
                                                 <input type="text" class="form-control cpf" placeholder="Ex.: 000.000.000-00" id="cpf" name="cpf" value="<?php if (isset($_GET["Cod_funcionario"])) {
-                                                                                                                                                                    #essa função do php pega o valor do input cpf
-                                                                                                                                                                    echo $dados["cpf"];
-                                                                                                                                                                } ?>" required>
+                                                                                                                                                                #essa função do php pega o valor do input cpf
+                                                                                                                                                                echo $dados["cpf"];
+                                                                                                                                                            } ?>" required>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputName">RG</label>
                                                 <input type="text" class="form-control rg" id="exampleInputName" placeholder="Digite o registro geral do funcionário" name="rg" value="<?php if (isset($_GET["Cod_funcionario"])) {
-                                                                                                                                                                                        #essa função do php pega o valor do input nome
-                                                                                                                                                                                        echo $dados["rg"];
-                                                                                                                                                                                    } ?>" required>
+                                                                                                                                                                                            #essa função do php pega o valor do input nome
+                                                                                                                                                                                            echo $dados["rg"];
+                                                                                                                                                                                        } ?>" required>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
@@ -345,25 +353,25 @@
                                             <div class="form-group">
                                                 <label>Salário</label>
                                                 <input name="salario" type="text" class="form-control money2" placeholder="Ex.: 1.798.00" value="<?php if (isset($_GET["Cod_funcionario"])) {
-                                                                                                                                                #essa função do php pega o valor do input nome
-                                                                                                                                                echo $dados["salario"];
-                                                                                                                                            } ?>" required>
+                                                                                                                                                        #essa função do php pega o valor do input nome
+                                                                                                                                                        echo $dados["salario"];
+                                                                                                                                                    } ?>" required>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputName">Horário de expediente</label>
                                                 <input type="text" class="form-control time" placeholder="Ex.: 00:00:00" value="<?php if (isset($_GET["Cod_funcionario"])) {
-                                                                                                                                            #essa função do php pega o valor do input nome
-                                                                                                                                            echo $dados["horas"];
-                                                                                                                                        } ?>" placeholder="Digite o expediente" name="horas" required>
+                                                                                                                                    #essa função do php pega o valor do input nome
+                                                                                                                                    echo $dados["horas"];
+                                                                                                                                } ?>" placeholder="Digite o expediente" name="horas" required>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
                                                 <label for="exampleInputBirth">Data de admissão</label>
                                                 <input type="date" min="1000-10-26" max="2020-11-24" class="form-control" id="exampleInputBirth" value="<?php if (isset($_GET["Cod_funcionario"])) {
-                                                                                                                            #essa função do php pega o valor do input nome
-                                                                                                                            echo $dados["dt_admicao"];
-                                                                                                                        } ?>" name="dt_admicao">
+                                                                                                                                                            #essa função do php pega o valor do input nome
+                                                                                                                                                            echo $dados["dt_admicao"];
+                                                                                                                                                        } ?>" name="dt_admicao">
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
@@ -391,9 +399,9 @@
                                             <div class="form-group">
                                                 <label for="exampleInputBirth">Nascimento</label>
                                                 <input type="date" min="1950-10-26" max="2020-12-25" class="form-control" id="exampleInputBirth" value="<?php if (isset($_GET["Cod_funcionario"])) {
-                                                                                                                            #essa função do php pega o valor do input nome
-                                                                                                                            echo $dados["dt_nascimento"];
-                                                                                                                        } ?>" name="dt_nascimento" required>
+                                                                                                                                                            #essa função do php pega o valor do input nome
+                                                                                                                                                            echo $dados["dt_nascimento"];
+                                                                                                                                                        } ?>" name="dt_nascimento" required>
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
@@ -444,9 +452,9 @@
                                             <div class="form-group">
                                                 <label for="exampleInputEmail1">Telefone</label>
                                                 <input type="text" class="form-control phone" id="telefone" name="telefone" placeholder="(xx) xxxx-xxxx" value="<?php if (isset($_GET["Cod_funcionario"])) {
-                                                                                                                                                            #essa função do php pega o valor do input nome
-                                                                                                                                                            echo $dados["telefone"];
-                                                                                                                                                        } ?>" >
+                                                                                                                                                                    #essa função do php pega o valor do input nome
+                                                                                                                                                                    echo $dados["telefone"];
+                                                                                                                                                                } ?>">
                                                 <div class="help-block with-errors"></div>
                                             </div>
                                             <div class="form-group">
@@ -493,23 +501,30 @@
     <script src="js/jquery.mask.js"></script>
 
     <script>
-    jQuery(document).ready(function() {
-        $('.nome').mask('A', {
-  translation: {
-    A: { pattern: /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/g, recursive: true },
-  },
-});
-        $('.cpf').mask('000.000.000-00', {reverse: true});
-        $('.money2').mask("#.##0,00", {reverse: true});
-        $('.phone').mask('(00) 0000-00000');
-        $('.time').mask('00:00:00');
-        if((".time")>="10:00"){
-            alert("horario invalido")
-        }
-        $('.rg').mask('00.000.000-0');
+        jQuery(document).ready(function() {
+            $('.nome').mask('A', {
+                translation: {
+                    A: {
+                        pattern: /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/g,
+                        recursive: true
+                    },
+                },
+            });
+            $('.cpf').mask('000.000.000-00', {
+                reverse: true
+            });
+            $('.money2').mask("#.##0,00", {
+                reverse: true
+            });
+            $('.phone').mask('(00) 0000-00000');
+            $('.time').mask('00:00:00');
+            if ((".time") >= "10:00") {
+                alert("horario invalido")
+            }
+            $('.rg').mask('00.000.000-0');
 
-    })
-</script>
+        })
+    </script>
 
 </body>
 
