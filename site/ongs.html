@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
@@ -8,25 +8,14 @@
     <title>CenterPet centro de busca</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
     <!-- Vendor CSS Files -->
     <link href="assets/vendor/aos/aos.css" rel="stylesheet">
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-
+    <link href="assets/css/ong.css" rel="stylesheet">
     <!-- =======================================================
   * Template Name: BizLand - v3.1.0
   * Template URL: https://bootstrapmade.com/bizland-bootstrap-business-template/
@@ -34,9 +23,7 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
 <body>
-
     <!-- ======= Top Bar ======= -->
     <section id="topbar" class="d-flex align-items-center">
         <div class="container d-flex justify-content-center justify-content-md-between">
@@ -53,129 +40,221 @@
             </div>
         </div>
     </section>
-
     <!-- ======= Header ======= -->
     <header id="header" class="d-flex align-items-center">
         <div class="container d-flex align-items-center justify-content-between">
-
-
             <h1 class="logo">
-                <a href="index.html"><img src="./assets/img/CenterPet.svg"></a>
-            </h1>
-
-            <!-- ======= Header ======= -->
-            <nav id="navbar" class="navbar">
-                <ul>
-                    <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#aulas">Planos</a></li>
-                    <li><a class="nav-link scrollto" href="">Ongs</a></li>
-                    <li><a class="nav-link scrollto" href="#about">Sobre</a></li>
-                    <li><a class="nav-link scrollto" href="contact.html">Cadastro</a></li>
-                </ul>
-                <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
-            <!-- .navbar -->
+                <a href="index.html"><img id="logoCenterPet" src="./assets/img/CenterPet.svg"></a>
+            </h1> <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pesquisa">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Cadastrar</button>
         </div>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto topnav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pet Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Ongs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contatos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sobre</a>
-                </li>
-            </ul>
-        </div>
-        <!-- The Modal -->
-        <div class="modal" id="myModal">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <!-- Modal Header -->
-                    <div class="modal-header">
-                        <h4 class="modal-title">Customer Sign In</h4>
-                        <button type="button" class="close" data-dismiss="modal">×</button>
-                    </div>
-                    <!-- Modal body -->
-                    <div class="modal-body">
-                        <form>
-                            <label class="sr-only" for="usrname">Username</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-user"></i></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                            </div>
-
-
-                            <label class="sr-only" for="Password">Name</label>
-                            <div class="input-group mb-2">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon2"><i class="fa fa-key"></i></span>
-                                </div>
-                                <input id="Password" type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2">
-                            </div>
-                        </form>
-                    </div>
-
-                    <!-- Modal footer -->
-
-                </div>
-            </div>
-        </div>
-
-
+    <nav class="navegacao">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Planos</a></li>
+            <li><a href="#">Ongs</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
     </nav>
+    <!------ Include the above in your HEAD tag ---------->
     <section id="hero" class="d-flex align-items-center">
         <div class="container" data-aos="zoom-out" data-aos-delay="100">
-
+            <h1>Seja Bem Vindo <span>Center Pet</span></h1>
+            <h2>Aqui você encontra os melhores lugares para seu Pet , nas proximidades do seu lar e com preços que cabem no seu bolso</h2>
+            <div class="d-flex">
+                <a href="#prices" class="btn-get-started scrollto">Quero conhecer planos</a>
+            </div>
+        </div>
         </div>
     </section>
-    <footer id="footer">
+    <!---== Star Section Lessons  ==--->
+    <!---====== End   Section Lesson     ====-->
+    <main id="main">
 
-        <div class="footer-newsletter">
+
+    </main>
+    <!-- End #main -->
+    <section class="about section-bg">
+        <div>
+            <div class="section-title">
+                <h1>Adoção de Pets</h1>
+                <br><br>
             <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <h4>Insira seu e-mail e receba nossas novidades</h4>
-                        <p>Não se preocupe , não lhe enviaremos mensagens de span</p>
-                        <form action="" method="post">
-                            <input type="email" name="email"><input type="submit" value="cadastre-se">
-                        </form>
+                <div class="row">
+                  <div class="col-sm">
+                    <img id="ban"src="./assets/img/Ongs_de_doacao/adote.jpg">
+                  </div>
+                  <div class="col-sm-9"><br>
+                   <h5> Adotar é uma forma de trazer um novo conceito para a sua vida</h5>
+                   <p>Gratidão: é um dos principais valores, entre outros ensinamentos, que a adoção de um pet traz para a vida do tutor. A partir de uma adoção as pessoas podem entender melhor o que significa ser grato, pois é exatamente este sentimento que o cão consegue transmitir.</p>
+                  </div>
+                </div>
+              </div>
+           </div>
+        </div>
+    </section>
+
+    <section class="container-doacao">
+        <!--
+            AQui deve redirecionar para o tipo de animal selecionado pelo cliente
+        -->
+      <div style="margin: 30px;">
+        <a href="####"class="btn btn-light">Cães</a>
+        <a class="btn btn-light">Gatos</a>
+        <hr>
+      </div>
+        <div class="row align-items-end">
+    
+            <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                <figure>        <img src="./assets/img/Ongs_de_doacao/2020-beth.jpg" alt="Avatar" style="width:300px;height:300px;"></figure>
+                <figcaption>Olá eu sou a Beth</figcaption>
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Beth</h1> 
+                        <p>Adoro correr e brincar</p> 
+                        <p>Sou um boa menina e estou a procura de um lar</p>
+                        <button class="btn btn-primary">Sobre Beth</button>
+                      </div>
+                    </div>
+          
+                  </div>
+            </div>        <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                <figure>        <img src="./assets/img/Ongs_de_doacao/leia.jpg" alt="Avatar" style="width:300px;height:300px;"></figure>
+                <figcaption>Olá eu sou o Elvis</figcaption>
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Elvis</h1> 
+                        <p>Adoro sombra e água fresca</p> 
+                        <p>Sou um bom garoto e estou a procura de um lar</p>
+                        <button class="btn btn-primary">QUERO ADOTAR</button>
+                      </div>
+                    </div>
+          
+                  </div>
+            </div>        <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                <figure>        <img src="./assets/img/Ongs_de_doacao/luca.jpg" alt="Avatar" style="width:300px;height:300px;"></figure>
+                <figcaption>Olá eu sou o Elvis</figcaption>
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Elvis</h1> 
+                        <p>Adoro sombra e água fresca</p> 
+                        <p>Sou um bom garoto e estou a procura de um lar</p>
+                        <button class="btn btn-primary">QUERO ADOTAR</button>
+                      </div>
+                    </div>
+          
+                  </div>
+            </div>        <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                <figure>        <img src="./assets/img/Ongs_de_doacao/fefe.jpg" alt="Avatar" style="width:300px;height:300px;"></figure>
+                <figcaption>Olá eu sou o Elvis</figcaption>
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Elvis</h1> 
+                        <p>Adoro sombra e água fresca</p> 
+                        <p>Sou um bom garoto e estou a procura de um lar</p>
+                        <button class="btn btn-primary">QUERO ADOTAR</button>
+                      </div>
+                    </div>
+          
+                  </div>
+            </div>        <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                <figure>        <img src="./assets/img/Ongs_de_doacao/gaia.jpg" alt="Avatar" style="width:300px;height:300px;"></figure>
+                <figcaption>Olá eu sou o Elvis</figcaption>
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Elvis</h1> 
+                        <p>Adoro sombra e água fresca</p> 
+                        <p>Sou um bom garoto e estou a procura de um lar</p>
+                        <button class="btn btn-primary">QUERO ADOTAR</button>
+                      </div>
+                    </div>
+          
+                  </div>
+            </div>        <div class="col">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                <figure>        <img src="./assets/img/Ongs_de_doacao/Fred.jpg" alt="Avatar" style="width:300px;height:300px;"></figure>
+                <figcaption>Olá eu sou o Elvis</figcaption>
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Elvis</h1> 
+                        <p>Adoro sombra e água fresca</p> 
+                        <p>Sou um bom garoto e estou a procura de um lar</p>
+                        <button class="btn btn-primary">QUERO ADOTAR</button>
+                      </div>
+                    </div>
+          
+                  </div>
+            </div>
+          </div>
+        
+    </section>
+    
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-4 col-md-8 footer-contact">
+                        <h3><img src="./assets/img/CenterPet.svg" style="width: 80px;"></h3>
+                        <p>
+                            Rua Geraldo Vandre <br> São Paulo , SP<br> 05568-0325
+                            <br><br>
+                            <strong>Fone:</strong> +11 4002-8922<br>
+                            <strong>Email:</strong> amiguinho@Bluehero.com<br>
+                        </p>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto active" href="#hero">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto" href="#aulas">Planos</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto" href="#music">Ongs</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto" href="#about">Sobre</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a class="nav-link scrollto" href="contact.html">Cadastro</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h5>Nossas midias sociais</h5>
+                        <small>Siga nossas redes sociais e acompanhe as novidades da CenterPet </small>
+                        <div class="social-links mt-3">
+                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                      
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
         <div class="container py-4">
             <div class="row mt-5">
-
-
-                <span style="color: #00f80c;"> &copy; Code Knight. todos direitos reservados 
-        <script type="text/javascript">
-          document.write(new Date().getFullYear());
-        </script>
-      </span>
-
-
-
+                <span style="color: #ff5100;"> &copy; Code Knight. todos direitos reservados 
+          <script type="text/javascript">
+            document.write(new Date().getFullYear());
+          </script>
+        </span>
             </div>
         </div>
     </footer>
-
     <!-- End Footer -->
 
     <div id="preloader"></div>
@@ -194,7 +273,5 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-
 </body>
-
 </html>

@@ -661,7 +661,9 @@ h6 {
 .section-bg {
     background-color: #000269;
 }
-
+#ban{
+    width: 1px;
+}
 .section-title {
     text-align: center;
     padding-bottom: 30px;
@@ -734,6 +736,7 @@ h6 {
 
 .card:hover .btn-outline-primary {
     color: white;
+  
     background: #000269;
 }
 
