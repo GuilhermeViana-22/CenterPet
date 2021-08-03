@@ -11,6 +11,23 @@
 
     <script src="https://kit.fontawesome.com/55136953e0.js" crossorigin="anonymous"></script>
 </head>
+<?php
+#nestes includes temos todos os estados e municipios do brasil na nossa aplicação, como isso ficaria dispensioso e sujando nosso codigo
+#está sendo utilizado um array em outro arquivo que carrega todas essas informações
+
+#ArrayLIst com os inputs do select
+# é necessario um ArrayList para utilizar ter um conjunto de valores selecionaveis
+$regiao = array(
+    "" => "----Selecione----",
+    "Leste" => "Leste",
+    "Oeste" => "Oeste",
+    "Central" => "Central",
+    "Note" => "Note",
+    "Sul" => "Sul",
+    "interior" => "interior"
+
+);
+?>
 
 <body>
     <div class="conteiner">
@@ -39,14 +56,20 @@
                 </div>
                 <!-- fim Social media-->
                 <p class="description description-second"> Ou use seu email e senha </p>
+
+
+                
+
                 <form action="crud/cadastro_login.php" class="form">
+                     
                     <label class="label-input"><i class="fas fa-user-alt icon-modify"></i></i> <input type="text" name="nomec" placeholder="Nome" required></label>
 
-                    <label class="label-input"><i class="fas fa-store-alt icon-modify"></i> <input type="text" name="cnpjc" placeholder="CNPJ" required></label>
+                    <label class="label-input"><i class="fas fa-store-alt icon-modify"></i> <input type="text" name="cnpjc" id="cnpjc" placeholder="CNPJ" required></label>
 
                     <label class="label-input"><i class="far fa-envelope icon-modify"></i><input type="email" name="emailc" id="" placeholder="Digite o email de cadastro" required></label>
 
                     <label class="label-input"><i class="fas fa-lock icon-modify"></i><input type="password" name="senhac" id="" placeholder="Digite um senha" required></label>
+                    <label class="form-check-label" for="ong"><input type="checkbox" class="form-check-input" id="ong" name="ong" value="ONG">Ong</label>
                     <?php if (isset($_GET["erroc"]) && $_GET["erroc"] == 1) { ?>
 
                         <div class="error" role="alert">
@@ -120,11 +143,27 @@
             </div>
         </div>
     </div>
-    <script src="js/app.js"></script>
 
-    <script src="js/jquery.mask.js"></script>
+
+
+
+
 
     <script>
+        var checkbox = document.querySelector("input[name=ong]");
+
+        checkbox.addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById("cnpjc").disabled = true;
+            } else {
+                document.getElementById("cnpjc").disabled = false;
+            }
+        });
+
+
+
+        
+
         jQuery(document).ready(function() {
             $('.nomec').mask('A', {
                 translation: {
@@ -134,15 +173,18 @@
                     },
                 },
             });
-           
+
             $('.cnpjc').mask('00.000.000/0000-00', {
                 reverse: true
             });
-           
+
 
         })
     </script>
 
+    <script src="js/app.js"></script>
+
+    <script src="js/jquery.mask.js"></script>
 
 
 </body>

@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+input[type="checkbox"] {
+    width: 10px;
+    height: 10px;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -22,7 +27,7 @@ body {
     background-color: #fff;
     border-radius: 15px;
     width: 960px;
-    height: 50%;
+    height: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -164,9 +169,18 @@ body {
     width: 55%;
 }
 
-.form input {
+.form input[type="text"],
+input[type="email"],
+input[type="password"] {
     height: 45px;
     width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+}
+
+.form input[type="checkbox"] {
+    height: 15px;
+    width: 15px;
     border: none;
     background-color: #ecf0f1;
 }

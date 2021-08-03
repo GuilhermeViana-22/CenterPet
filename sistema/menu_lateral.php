@@ -42,7 +42,7 @@
                             <a class="nav-link" href="Cad_planos.php">Gerenciar Planos</a>
                         </nav>
                     </div>
-                <?php } else { ?>
+                <?php } elseif ($_SESSION["tipo_usuario"] == "Cliente" || $_SESSION["tipo_usuario"] == "cliente") { ?>
                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#controleus" aria-expanded="false" aria-controls="collapseLayouts">
                         <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                         Conta
@@ -52,6 +52,37 @@
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="gerenciamento_conta.php">Gerenciamento de conta cliente </a>
                             <a class="nav-link" href="cad_endereco.php">Gerenciamento de Plano cliente </a>
+                        </nav>
+                    </div>
+                    <!--Programar nome de usuario-->
+
+                    <div class="collapse" id="controleusu" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+
+                        </nav>
+                    </div>
+                <?php } else { ?>
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#controleus" aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Conta
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="controleus" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="gerenciamento_conta.php">Gerenciamento de conta Ong </a>
+                            <a class="nav-link" href="cad_endereco.php">Gerenciamento de Plano Ong </a>
+                        </nav>
+                    </div>
+
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#cadong" aria-expanded="false" aria-controls="collapseLayouts">
+                        <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                        Cadastro
+                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                    </a>
+                    <div class="collapse" id="cadong" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                        <nav class="sb-sidenav-menu-nested nav">
+                            <a class="nav-link" href="cad_animal.php">Cadastro de Animal </a>
+                            <a class="nav-link" href="cad_endereco.php">Cadastrar Endereco </a>
                         </nav>
                     </div>
                     <!--Programar nome de usuario-->
