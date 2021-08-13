@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>PetCenter || cliente </title>
+    <title>Espaço Pets || cliente </title>
     <link href="css/styles.css" rel="stylesheet" />
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -108,7 +108,7 @@
             }
         };
     </script>
-<body class="sb-nav-fixed">
+<body  style="background-color: #C8F6FF;"class="sb-nav-fixed">
 
     <?php include 'nav.php'; ?>
     <div id="layoutSidenav">
@@ -173,6 +173,9 @@
 
                     <?php } ?>
                     <div class="card">
+                    <div class="card-header">
+                                <h3  class="text-center font-weight-light my-1">Endereço</h3>
+                            </div>
 
                         <div class="card-body">
                             <form id="formExemplo" method="post" action="crud/crud_endereco.php" data-toggle="validator" role="form">
@@ -186,12 +189,24 @@
                                     <input type="hidden" name="id_endereco" value="<?php echo $_GET["id_endereco"]; ?>" />
                                 <?php } ?>
 
-                                <div class="form-group row">
+                                <div style="display: block; border: 35px solid #fff; background-color: #FFD7CE;" class="Areadados">
 
 
 
-                                    <div class=" col-md-3">
-                                        <label for="cep" class="small col-md-3 mb-1">CEP</label>
+
+
+
+
+
+
+
+                                
+                                <div style="padding: 20px;" class="form-group row">
+
+
+
+                                    <div class=" col-md-4">
+                                        <label for="cep" class="small">CEP</label>
                                         <input name="cep" type="text" placeholder="digite o CEP" class="form-control" id="cep" value="<?php if (isset($_GET["id_endereco"])) {
                                                                                                                                             echo $dados["cep"];
                                                                                                                                         } ?>" onblur="pesquisacep(this.value);">
@@ -282,44 +297,47 @@
                                     </div>
                                 </div>
 
+                                </div>
 
                                 <div id="botoes" class="col-md-9 col-xs-12" style="margin-left:560px; margin: 20px; ">
                                     <div style="margin-left:560px; margin-top: 20px; " class="col-md-15">
-                                        <button type="submit" class="btn btn-primary"><i class="fas fa-paw"></i> Salvar</button>
-                                    </div>
 
+                                    </div>
+                                    <button type="submit" class="btn btn-primary"><i class="fas fa-paw"></i> Salvar</button>
                                 </div>
                             </form>
 
-                            <div class="row w-100">
-                                <div class="col-xl-12 col-md-12 ">
+                            <div class="row">
+                                <div class="col-xl-8">
                                     <div class="card">
                                         <div class="card-header">
-                                            <i class="fas fa-table mr-6"></i> Meus Endereco
+                                            <i class="fas fa-table mr-6"></i> Meus Endereços
                                         </div>
-                                        <form method="GET" style="margin-top:15px;" action="cad_endereco.php">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="row">
-                                                        <br />
-                                                        <div style="padding-left:25px;" class="col-md-3">
-                                                            Pesquisar:
-                                                        </div>
-                                                        <div class="col-md-9">
-                                                            <input type="text" value="<?php if (isset($_GET["pesquisa"])) {
-                                                                                            echo $_GET["pesquisa"];
-                                                                                        } ?>" name="pesquisa" class="form-control">
+                                        <form method="GET" style="margin-top:15px;" action="cad_animal.php">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="row">
+                                                            <br />
+                                                            <div class="col-md-4">
+                                                                Pesquisar:
+                                                            </div>
+                                                            <div class="col-md-6">
+                                                                <input type="text" value="<?php if (isset($_GET["pesquisa"])) {
+                                                                                                echo $_GET["pesquisa"];
+                                                                                            } ?>" name="pesquisa" class="form-control">
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <div style="margin-left: 100px;" class="col-md-4">
+                                                        <input type="submit" class="btn btn-primary" value="pesquisar">
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <input type="submit" class="btn btn-primary" value="pesquisar">
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <div class="card-body mr-1">
 
-                                            <table class="table table-hover">
+                                              <br>
+                                              <br>
+                                              <br>
+
+                                              <table style="border: 1px solid #000;" class="table table-dark">
                                                 <tr>
                                                     <th>#</th>
                                                     <th>Logradouro</th>
@@ -371,7 +389,8 @@
 
 
                                             </table>
-                                        </div>
+                                            </form>
+                                     
                                     </div>
 
 
@@ -385,6 +404,9 @@
                 </div>
 
             </main>
+            <br>
+            <br>
+            <br>
             <?php include 'footer.php'; ?>
         </div>
     </div>

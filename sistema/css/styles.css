@@ -78,7 +78,12 @@ hr {
   height: 0;
   overflow: visible;
 }
+Areadados{
 
+  display: block;
+  border: 13px solid #000;
+
+}
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -321,6 +326,8 @@ legend {
 progress {
   vertical-align: baseline;
 }
+
+
 
 [type=number]::-webkit-inner-spin-button,
 [type=number]::-webkit-outer-spin-button {

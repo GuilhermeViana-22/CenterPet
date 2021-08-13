@@ -122,7 +122,7 @@
     };
 </script>
 
-<body class="sb-nav-fixed">
+<body style="background-color: #C8F6FF;"  class="sb-nav-fixed">
 
     <?php include 'nav.php'; ?>
 
@@ -185,12 +185,12 @@
                                 ?>
                             </div>
                         <?php } ?>
-                        <div class="card ">
+                        <div class="card-dark">
                             <div class="card-header">
-                                <h3 class="text-center font-weight-light my-1">Animal</h3>
+                                <h3  class="text-center font-weight-light my-1">Animal</h3>
                             </div>
                             <div class="card-body">
-                                <form action="crud/crud_animal.php" method="POST" data-toggle="validator" role="form" enctype="multipart/form-data">
+                                <form  action="crud/crud_animal.php" method="POST" data-toggle="validator" role="form" enctype="multipart/form-data">
 
                                     <?php
                                     $dados;
@@ -206,7 +206,7 @@
 
 
                                     <div class="form-group row">
-                                        <div class="col-md-2" >
+                                        <div class="col-md-2">
 
                                             <?php
                                             if (isset($_GET["id_animal"])) {
@@ -223,7 +223,7 @@
                                                 } ?>
 
                                                 <img src="crud/img/<?php echo $aquivo ?>" style="width: 154px; height:172px;" class="rounded float-start" alt="...">
-                                               
+
                                             <?php } ?>
 
 
@@ -237,114 +237,118 @@
                                         ?>
                                             <input type="hidden" name="id_usuario" value="<?php echo $_GET["id_usuario"]; ?>" />
                                         <?php } ?>
-                                        <div class="col-md-3 mb-3">
-                                            <label for="formFile" class="form-label">Adicionar foto desse pet</label>
-                                            <input class="form-control" placeholder="escolher foto" type="file" name="arquivo" id="formFile">
+                                        <div class="AreaFoto">
+                                            <div class="col-md-12 mb-3">
+                                                <label for="formFile" class="form-label">Adicionar foto desse pet</label>
+                                                <input class="form-control" placeholder="escolher foto" type="file" name="arquivo" id="formFile">
+                                            </div>
+
                                         </div>
 
+                                        <div style="display: block; border: 35px solid #fff; background-color: #FFD7CE;" class="AreaDados">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="small mb-2" for="NomeAnimal">Nome</label>
+                                                    <input class="form-control  nome" id="NomeAnimal" type="text" value="<?php if (isset($_GET["id_animal"])) {
+                                                                                                                                echo $dados["nome_animal"];
+                                                                                                                            } ?>" placeholder="Digite o nome" name="nome_animal" required />
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
+                                            </div>
 
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="small mb-2" for="NomeAnimal">Nome</label>
-                                                <input class="form-control  nome" id="NomeAnimal" type="text" value="<?php if (isset($_GET["id_animal"])) {
-                                                                                                                            echo $dados["nome_animal"];
-                                                                                                                        } ?>" placeholder="Digite o nome" name="nome_animal" required />
-                                                <div class="help-block with-errors"></div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="small mb-2" for="idadeAnimal">Idade</label>
+                                                    <input class="form-control idade" id="idadeAnimal" type="text" value="<?php if (isset($_GET["id_animal"])) {
+                                                                                                                                echo $dados["idade"];
+                                                                                                                            } ?>" placeholder="Digite a idade" name="idade" required />
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
                                             </div>
-                                        </div>
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="small mb-1" for="RgaAni">RGA</label>
+                                                    <input class="form-control rga" id="RgaAni" type="text" value="<?php if (isset($_GET["id_animal"])) {
+                                                                                                                        echo $dados["rga"];
+                                                                                                                    } ?>" placeholder="Digite o RGA" name="rga" required />
 
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="small mb-2" for="idadeAnimal">Idade</label>
-                                                <input class="form-control idade" id="idadeAnimal" type="text" value="<?php if (isset($_GET["id_animal"])) {
-                                                                                                                            echo $dados["idade"];
-                                                                                                                        } ?>" placeholder="Digite a idade" name="idade" required />
-                                                <div class="help-block with-errors"></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-3">
-                                            <div class="form-group">
-                                                <label class="small mb-1" for="RgaAni">RGA</label>
-                                                <input class="form-control rga" id="RgaAni" type="text" value="<?php if (isset($_GET["id_animal"])) {
-                                                                                                                    echo $dados["rga"];
-                                                                                                                } ?>" placeholder="Digite o RGA" name="rga" required />
-
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label class="small mb-1" for="Raça">Raça</label>
+                                                    <input class="form-control py-2" id="Raça" type="text" value="<?php if (isset($_GET["id_animal"])) {
+                                                                                                                        echo $dados["raca"];
+                                                                                                                    } ?>" placeholder="Digite a Raça" name="raca" required />
+                                                    <div class="help-block with-errors"></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label class="small mb-1" for="Raça">Raça</label>
-                                                <input class="form-control py-2" id="Raça" type="text" value="<?php if (isset($_GET["id_animal"])) {
-                                                                                                                    echo $dados["raca"];
-                                                                                                                } ?>" placeholder="Digite a Raça" name="raca" required />
-                                                <div class="help-block with-errors"></div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            <label for="SexoAni " class="small mb-1">Sexo</label>
-                                            <select id="cmbSexo" class="form-control py-2" name="sexo">
-                                                <?php
-                                                # A logica utilizada nos selects é diferente dos demais blocos de codigo do nosso sistema
-                                                if (isset($_GET["id_animal"])) {
-                                                    foreach ($sexo as $key => $value) {
-                                                        if ($dados["sexo"] == $key) {
-                                                            echo "<option value=" . $key . " selected>" . $value . "</option>";
-                                                        } else {
+                                            <div class="form-group col-md-12">
+                                                <label for="SexoAni " class="small mb-1">Sexo</label>
+                                                <select id="cmbSexo" class="form-control py-2" name="sexo">
+                                                    <?php
+                                                    # A logica utilizada nos selects é diferente dos demais blocos de codigo do nosso sistema
+                                                    if (isset($_GET["id_animal"])) {
+                                                        foreach ($sexo as $key => $value) {
+                                                            if ($dados["sexo"] == $key) {
+                                                                echo "<option value=" . $key . " selected>" . $value . "</option>";
+                                                            } else {
+                                                                echo "<option value=" . $key . ">" . $value . "</option>";
+                                                            }
+                                                        }
+                                                    } else {
+                                                        foreach ($sexo as $key => $value) {
                                                             echo "<option value=" . $key . ">" . $value . "</option>";
                                                         }
                                                     }
-                                                } else {
-                                                    foreach ($sexo as $key => $value) {
-                                                        echo "<option value=" . $key . ">" . $value . "</option>";
-                                                    }
-                                                }
-                                                ?>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-3">
-                                            <label for="tipoAni " class="small mb-1">Tipo</label>
-                                            <select id="tipoAni" class="form-control py-2 " name="tipo">
-                                                <?php
-                                                # A logica utilizada nos selects é diferente dos demais blocos de codigo do nosso sistema
-                                                if (isset($_GET["id_animal"])) {
-                                                    foreach ($tipo as $key => $value) {
-                                                        if ($dados["tipo"] == $key) {
-                                                            echo "<option value=" . $key . " selected>" . $value . "</option>";
-                                                        } else {
+                                                    ?>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <label for="tipoAni " class="small mb-1">Tipo</label>
+                                                <select id="tipoAni" class="form-control py-2 " name="tipo">
+                                                    <?php
+                                                    # A logica utilizada nos selects é diferente dos demais blocos de codigo do nosso sistema
+                                                    if (isset($_GET["id_animal"])) {
+                                                        foreach ($tipo as $key => $value) {
+                                                            if ($dados["tipo"] == $key) {
+                                                                echo "<option value=" . $key . " selected>" . $value . "</option>";
+                                                            } else {
+                                                                echo "<option value=" . $key . ">" . $value . "</option>";
+                                                            }
+                                                        }
+                                                    } else {
+                                                        foreach ($tipo as $key => $value) {
                                                             echo "<option value=" . $key . ">" . $value . "</option>";
                                                         }
                                                     }
-                                                } else {
-                                                    foreach ($tipo as $key => $value) {
-                                                        echo "<option value=" . $key . ">" . $value . "</option>";
-                                                    }
-                                                }
-                                                ?>
-                                            </select>
-                                        </div>
+                                                    ?>
+                                                </select>
+                                            </div>
 
-                                        <div class="form-group col-md-5">
-                                            <label for="observacaoani">Observação</label>
-                                            <textarea name="observacao" class="form-control" id="observacaoani" rows="3" placeholder="Digite a observação do animal"><?php if (isset($_GET["id_animal"])) {
-                                                                                                                                                                            echo $dados["observacao"];
-                                                                                                                                                                        } ?></textarea>
+                                            <div class="form-group col-md-12">
+                                                <label for="observacaoani">Observação</label>
+                                                <textarea name="observacao" class="form-control" id="observacaoani" rows="3" placeholder="Digite a observação do animal"><?php if (isset($_GET["id_animal"])) {
+                                                                                                                                                                                echo $dados["observacao"];
+                                                                                                                                                                            } ?></textarea>
+                                            </div>
+                                            <div class="form-check">
+                                                <input type="checkbox" class="form-check-input" value="S" id="AtivoAni" name="ativo" <?php if (isset($_GET["id_animal"])) {
+                                                                                                                                            if ($dados["ativo"] == "S") {
+                                                                                                                                                echo "checked";
+                                                                                                                                            }
+                                                                                                                                        } ?>>
+                                                <label class="form-check-label" for="AtivoAni">Ativo</label>
+                                            </div>
                                         </div>
-                                        <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" value="S" id="AtivoAni" name="ativo" <?php if (isset($_GET["id_animal"])) {
-                                                                                                                                        if ($dados["ativo"] == "S") {
-                                                                                                                                            echo "checked";
-                                                                                                                                        }
-                                                                                                                                    } ?>>
-                                            <label class="form-check-label" for="AtivoAni">Ativo</label>
-                                        </div>
+                                        <div id="botoes" class="col-md-12">
+                                            <div style="padding-left:370px;" class="col-md-15">
+                                                <button type="submit" class="btn btn-success"><i class="fas fa-paw"></i> Salvar</button>
+                                            </div>
 
+                                        </div>
                                     </div>
-                                    <div id="botoes" class="col-md-9 col-xs-12">
-                                        <div style="padding-left:370px;" class="col-md-15">
-                                            <button type="submit" class="btn btn-success"><i class="fas fa-paw"></i> Salvar</button>
-                                        </div>
 
-                                    </div>
 
                                 </form>
 
@@ -362,27 +366,27 @@
                                                     <div class="col-md-6">
                                                         <div class="row">
                                                             <br />
-                                                            <div style="padding-left:25px;" class="col-md-3">
+                                                            <div class="col-md-4">
                                                                 Pesquisar:
                                                             </div>
-                                                            <div class="col-md-9">
+                                                            <div class="col-md-6">
                                                                 <input type="text" value="<?php if (isset($_GET["pesquisa"])) {
                                                                                                 echo $_GET["pesquisa"];
                                                                                             } ?>" name="pesquisa" class="form-control">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div style="margin-left: 100px;" class="col-md-4">
                                                         <input type="submit" class="btn btn-primary" value="pesquisar">
                                                     </div>
                                                 </div>
 
                                             </form>
                                             <br>
-                                            <table class="table table-striped">
-                                                <tr>
+                                            <table class="table table-dark">
+                                                <tr style="padding: 20px;">
                                                     <th>ID_Animal</th>
-                                                    <th>Imagem</th>
+
                                                     <th>Nome</th>
                                                     <th>Raça</th>
                                                     <th>RGA</th>
@@ -406,9 +410,9 @@
                                                 while ($dados = $queryAnimal->fetch_assoc()) {
                                                 ?>
 
-                                                    <tr width="20px">
+                                                    <tr style="align-itens: center;width: 22px;">
                                                         <td width="20px"><?php echo $dados["id_animal"]; ?> </td>
-                                                        <td width="20px"><?php echo $dados["imagem"]; ?> </td>
+
                                                         <td width="20px"><?php echo $dados["nome_animal"]; ?></td>
                                                         <td width="20px"><?php echo $dados["raca"]; ?></td>
                                                         <td width="20px"> <?php echo $dados["rga"]; ?></td>
@@ -461,6 +465,9 @@
                     </div>
                 </div>
             </main>
+            <br>
+            <br>
+            <br>
             <?php include 'footer.php'; ?>
         </div>
     </div>

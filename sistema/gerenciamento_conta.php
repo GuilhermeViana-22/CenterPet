@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="sb-nav-fixed">
+<body  style="background-color: #C8F6FF;" class="sb-nav-fixed">
     <?php include 'nav.php'; ?>
     <div id="layoutSidenav">
         <!--Tag de incorporação ao menu no codigo html-->
@@ -264,6 +264,9 @@
 
                 </div>
             </main>
+            <br>
+            <br>
+            <br>
             <?php include 'footer.php'; ?>
         </div>
     </div>
