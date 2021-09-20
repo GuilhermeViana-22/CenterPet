@@ -1,0 +1,860 @@
+* {
+    color: #fff;
+    font-size: 16pt;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-size: 1rem;
+    background-color: #000000ec;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: #fff;
+}
+
+#logo>img {
+    display: flex;
+    width: 150px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    box-sizing: border-box;
+    height: 70px;
+    padding: 1rem;
+    align-items: center;
+    /* alinhando ao centro  */
+    flex-wrap: wrap;
+    /*quando a tela forn mt pequena o item ira para baixo*/
+    padding: 20px;
+}
+
+#menu {
+    display: block;
+}
+
+#menu,
+li {
+    display: flex;
+    margin-left: 20px;
+    gap: .5rem;
+}
+
+#logo {
+    z-index: 1001;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 150px;
+    height: 40px;
+    font-size: 24pt;
+}
+
+small {
+    font-size: 14pt;
+    color: rgb(194, 194, 194);
+}
+
+#menu li a {
+    display: block;
+    padding: 20px;
+    margin: 10px;
+    z-index: 1000;
+}
+
+#btnlogin {
+    background-color: orangered;
+    width: 80px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 50px;
+    border-radius: 10px;
+}
+
+#btnCadastrar {
+    background-color: orangered;
+    width: auto;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-right: 20px;
+    display: block;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.bannerDesktop {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    /* tamanho do display do navegador */
+    height: 100%;
+    /* tamano limite da tela*/
+    overflow: hidden;
+    /* retira os scrolls e barras de rolagem*/
+    display: block;
+    justify-content: center;
+    text-align: center;
+    top: 0;
+    display: block;
+    opacity: 0.3;
+}
+
+#pesquisar {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 40px;
+    margin-top: 50px;
+    z-index: 99999;
+    color: orange;
+    outline: 1px solid orange;
+    text-transform: uppercase;
+}
+
+input::placeholder {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#btnPesquisar {
+    background-color: orangered;
+    width: 20%;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #000;
+}
+
+#btnPesquisar:hover {
+    background-color: rgb(255, 89, 29);
+}
+
+article {
+    margin-top: 300px;
+}
+
+
+/* ======================================================= */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    /* alinhando ao centro do container */
+    margin: 0 auto;
+}
+
+.flex>div {
+    flex: 1 1 300px;
+    margin: 20px;
+    /* background-color: #12121400; */
+    width: 200px;
+    height: 300px;
+    /* margin-top: 600px; */
+    justify-content: space-evenly;
+    color: #fff;
+    border: 1px solid orangered;
+    padding: 10px;
+    text-align: center;
+}
+
+.flex>div>i {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.flex>div:hover {
+    background-color: #ff480028;
+    border: 1px solid rgb(255, 188, 133);
+    transition: 2s;
+}
+
+.fas {
+    font-size: 2em;
+}
+
+#p_father {
+    text-align: inherit;
+    font-size: 18pt;
+}
+
+#p_child {
+    text-align: inherit;
+    font-size: 18pt;
+}
+
+
+/* ==================================user================================== */
+
+#iconcheck {
+    color: orange;
+    padding: 20px;
+}
+
+fieldset {
+    border: 3px solid orange;
+    font-size: 16pt;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+legend {
+    font-size: 20pt;
+}
+
+.list>li {
+    display: block;
+    display: inline-block;
+    align-items: center;
+    padding: 10px;
+    font-size: 18pt;
+}
+
+.valores {
+    margin-top: 50px;
+    height: auto;
+    padding: 40px;
+    color: #000;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: baseline;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card {
+    padding: 10px;
+    margin: 40px;
+    text-align: center;
+    border-radius: 15px;
+    border: solid orangered;
+}
+
+hr {
+    outline: none;
+    border: 1px solid rgba(255, 68, 0, 0.301);
+}
+
+#btnSelecionar {
+    background-color: orangered;
+    width: auto;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.container-footer {
+    background-color: rgba(0, 0, 0, 0.589);
+    margin-top: 50px;
+    padding: 30px;
+    column-count: 3;
+    z-index: 1001;
+}
+
+.redes_sociais {
+    display: flex;
+    margin: 30px;
+}
+
+.fab {
+    display: block;
+    background-color: orangered;
+    padding: 10px;
+}
+
+.info {
+    color: #fff;
+}
+
+.btnMob {
+    display: none;
+}
+
+@media (min-width: 100px) and ( max-width: 300px) {
+    * {
+        font-size: 14pt;
+    }
+    .btnMob {
+        display: block;
+        background-color: rgb(255, 89, 29);
+        color: black;
+    }
+    #menu {
+        display: none;
+    }
+    .bannerDesktop {
+        display: none;
+    }
+    #ogo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #logo>img {
+        display: flex;
+        width: 80px;
+    }
+    #firstText {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: inherit;
+        font-size: 10pt;
+    }
+    #pesquisar {
+        margin-top: 400px;
+        width: 90%;
+        color: #000;
+    }
+    input::placeholder {
+        text-align: inherit;
+        padding: 30px;
+        margin: 30px;
+    }
+    #btnPesquisar {
+        background-color: orangered;
+        width: 50%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #000;
+    }
+    .flex-container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    article {
+        margin-top: 300px;
+    }
+    /* ======================================================= */
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        /* alinhando ao centro do container */
+        margin: 0 auto;
+    }
+    .flex>div {
+        flex: 1 1 300px;
+        margin: 20px;
+        /* background-color: #12121400; */
+        width: 200px;
+        height: auto;
+        /* margin-top: 600px; */
+        justify-content: space-evenly;
+        color: #fff;
+        border: 1px solid orangered;
+        padding: 10px;
+        text-align: center;
+    }
+    .flex>div>i {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .flex>div:hover {
+        background-color: #ff480028;
+        border: 1px solid rgb(255, 188, 133);
+        transition: 2s;
+    }
+    .fas {
+        font-size: 2em;
+    }
+    #p_father {
+        text-align: inherit;
+    }
+    #p_child {
+        text-align: inherit;
+    }
+    #iconcheck {
+        text-align: inherit;
+        color: orange;
+    }
+    legend {
+        font-size: 14pt;
+    }
+    .list {
+        display: block;
+        display: inline-block;
+        align-items: inherit;
+        padding: 10px;
+        margin-left: -30px;
+        font-size: 18pt;
+    }
+    fieldset {
+        border: 3px solid orange;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 50px;
+        text-align: inherit;
+        font-size: 8pt;
+    }
+    list {
+        text-align: inherit;
+    }
+    .valores {
+        margin-top: 50px;
+        height: auto;
+        color: #000;
+    }
+    .flex-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: inherit;
+        border: 1pxz solid orangered;
+    }
+    hr {
+        outline: none;
+        border: 1px solid rgba(255, 68, 0, 0.301);
+    }
+}
+
+@media (min-width: 300px) and ( max-width: 600px) {
+    * {
+        font-size: 14pt;
+    }
+    .btnMob {
+        display: block;
+        background-color: rgb(255, 89, 29);
+        color: black;
+    }
+    #menu {
+        display: none;
+    }
+    .bannerDesktop {
+        display: none;
+    }
+    #ogo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #firstText {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+        text-align: center;
+    }
+    #pesquisar {
+        margin-top: 300px;
+        width: 90%;
+        color: #000;
+    }
+    input::placeholder {
+        text-align: inherit;
+        padding: 30px;
+        margin: 30px;
+    }
+    #btnPesquisar {
+        background-color: orangered;
+        width: 50%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #000;
+    }
+    .flex-container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    article {
+        margin-top: 300px;
+    }
+    /* ======================================================= */
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        /* alinhando ao centro do container */
+        margin: 0 auto;
+    }
+    .flex>div {
+        flex: 1 1 300px;
+        margin: 20px;
+        /* background-color: #12121400; */
+        width: 200px;
+        height: auto;
+        /* margin-top: 600px; */
+        justify-content: space-evenly;
+        color: #fff;
+        border: 1px solid orangered;
+        padding: 10px;
+        text-align: center;
+    }
+    .flex>div>i {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .flex>div:hover {
+        background-color: #ff480028;
+        border: 1px solid rgb(255, 188, 133);
+        transition: 2s;
+    }
+    .fas {
+        font-size: 2em;
+    }
+    #p_father {
+        text-align: inherit;
+    }
+    #p_child {
+        text-align: inherit;
+    }
+    #iconcheck {
+        text-align: inherit;
+        color: orange;
+    }
+    legend {
+        font-size: 14pt;
+    }
+    .list {
+        display: block;
+        display: inline-block;
+        align-items: inherit;
+        padding: 10px;
+        margin-left: -30px;
+        font-size: 18pt;
+    }
+    fieldset {
+        border: 3px solid orange;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 50px;
+        text-align: inherit;
+        font-size: 8pt;
+    }
+    list {
+        text-align: inherit;
+    }
+    .valores {
+        margin-top: 50px;
+        height: auto;
+        color: #000;
+    }
+    .flex-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: inherit;
+        border: 1pxz solid orangered;
+    }
+    hr {
+        outline: none;
+        border: 1px solid rgba(255, 68, 0, 0.301);
+    }
+}
+
+@media (min-width: 600px) and ( max-width: 730px) {
+    * {
+        font-size: 14pt;
+    }
+    .btnMob {
+        display: block;
+        background-color: rgb(255, 89, 29);
+        color: black;
+    }
+    #menu {
+        display: none;
+    }
+    .bannerDesktop {
+        display: none;
+    }
+    #ogo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #firstText {
+        margin-left: 40px;
+        margin-right: 40px;
+        text-align: center;
+    }
+    #pesquisar {
+        margin-top: 200px;
+        width: 90%;
+        color: #000;
+    }
+    input::placeholder {
+        text-align: inherit;
+        padding: 30px;
+        margin: 30px;
+    }
+    #btnPesquisar {
+        background-color: orangered;
+        width: 50%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #000;
+    }
+    .flex-container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    article {
+        margin-top: 300px;
+    }
+    /* ======================================================= */
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        /* alinhando ao centro do container */
+        margin: 0 auto;
+    }
+    .flex>div {
+        flex: 1 1 300px;
+        margin: 20px;
+        /* background-color: #12121400; */
+        width: 200px;
+        height: auto;
+        /* margin-top: 600px; */
+        justify-content: space-evenly;
+        color: #fff;
+        border: 1px solid orangered;
+        padding: 10px;
+        text-align: center;
+    }
+    .flex>div>i {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .flex>div:hover {
+        background-color: #ff480028;
+        border: 1px solid rgb(255, 188, 133);
+        transition: 2s;
+    }
+    .fas {
+        font-size: 2em;
+    }
+    #p_father {
+        text-align: inherit;
+    }
+    #p_child {
+        text-align: inherit;
+    }
+    #iconcheck {
+        text-align: inherit;
+        color: orange;
+    }
+    legend {
+        font-size: 14pt;
+    }
+    .list {
+        display: block;
+        display: inline-block;
+        align-items: inherit;
+        padding: 10px;
+        margin-left: -30px;
+        font-size: 18pt;
+    }
+    fieldset {
+        border: 3px solid orange;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 50px;
+        text-align: inherit;
+        font-size: 8pt;
+    }
+    list {
+        text-align: inherit;
+    }
+    .valores {
+        margin-top: 50px;
+        height: auto;
+        color: #000;
+    }
+    .flex-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: inherit;
+        border: 1pxz solid orangered;
+    }
+    hr {
+        outline: none;
+        border: 1px solid rgba(255, 68, 0, 0.301);
+    }
+}
+
+@media (min-width: 730px) and ( max-width: 1024px) {
+    * {
+        font-size: 14pt;
+    }
+    .btnMob {
+        display: block;
+        background-color: rgb(255, 89, 29);
+        color: black;
+    }
+    #menu {
+        display: none;
+    }
+    #ogo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #firstText {
+        margin-top: -100px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+    #pesquisar {
+        margin-top: 200px;
+        width: 90%;
+        color: #000;
+    }
+    input::placeholder {
+        text-align: inherit;
+        padding: 30px;
+        margin: 30px;
+    }
+    #btnPesquisar {
+        background-color: orangered;
+        width: 50%;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        height: 50px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px #000;
+    }
+    .flex-container {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    article {
+        margin-top: 300px;
+    }
+    /* ======================================================= */
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        /* alinhando ao centro do container */
+        margin: 0 auto;
+    }
+    .flex>div {
+        flex: 1 1 300px;
+        margin: 20px;
+        /* background-color: #12121400; */
+        width: 200px;
+        height: auto;
+        /* margin-top: 600px; */
+        justify-content: space-evenly;
+        color: #fff;
+        border: 1px solid orangered;
+        padding: 10px;
+        text-align: center;
+    }
+    .flex>div>i {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .flex>div:hover {
+        background-color: #ff480028;
+        border: 1px solid rgb(255, 188, 133);
+        transition: 2s;
+    }
+    .fas {
+        font-size: 2em;
+    }
+    #p_father {
+        text-align: inherit;
+    }
+    #p_child {
+        text-align: inherit;
+    }
+    #iconcheck {
+        text-align: inherit;
+        color: orange;
+    }
+    legend {
+        font-size: 14pt;
+    }
+    .list {
+        display: block;
+        display: inline-block;
+        align-items: inherit;
+        padding: 10px;
+        margin-left: -30px;
+        font-size: 18pt;
+    }
+    fieldset {
+        border: 3px solid orange;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 50px;
+        text-align: inherit;
+        font-size: 8pt;
+    }
+    list {
+        text-align: inherit;
+    }
+    .valores {
+        margin-top: 50px;
+        height: auto;
+        color: #000;
+    }
+    .flex-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: inherit;
+        border: 1pxz solid orangered;
+    }
+    hr {
+        outline: none;
+        border: 1px solid rgba(255, 68, 0, 0.301);
+    }
+}
